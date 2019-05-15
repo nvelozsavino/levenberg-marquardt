@@ -15,7 +15,7 @@ export default function errorCalculation(
   const func = parameterizedFunction(parameters);
 
   for (var i = 0; i < data.x.length; i++) {
-    error += Math.abs((data.y[i]*data.y[i]) - (func(data.x[i])*func(data.x[i])));
+    error += (data.y[i]- func(data.x[i]))*(data.y[i]- func(data.x[i]));
   }
 
   return error;
